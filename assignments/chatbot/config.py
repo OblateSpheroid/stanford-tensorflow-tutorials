@@ -23,7 +23,7 @@ OUTPUT_FILE = 'output_convo.txt'
 PROCESSED_PATH = 'processed'
 CPT_PATH = 'checkpoints'
 
-THRESHOLD = 1
+THRESHOLD = 2
 
 PAD_ID = 0
 UNK_ID = 1
@@ -48,5 +48,3 @@ LR = 0.5
 MAX_GRAD_NORM = 5.0
 
 NUM_SAMPLES = 512
-ENC_VOCAB = 24133
-DEC_VOCAB = 22879

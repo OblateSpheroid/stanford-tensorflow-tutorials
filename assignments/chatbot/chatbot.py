@@ -87,8 +87,8 @@ def _get_buckets():
     train_buckets_scale is the inverval that'll help us 
     choose a random bucket later on.
     """
-    test_buckets = data.load_data('test.enc.ids', 'test.dec.ids')
-    data_buckets = data.load_data('train.enc.ids', 'train.dec.ids')
+    test_buckets = data.load_data('test_ids.enc', 'test_ids.dec')
+    data_buckets = data.load_data('train_ids.enc', 'train_ids.dec')
     train_bucket_sizes = [len(data_buckets[b]) for b in range(len(config.BUCKETS))]
     print("Number of samples in each bucket:\n", train_bucket_sizes)
     train_total_size = sum(train_bucket_sizes)
@@ -199,8 +199,6 @@ def chat():
 
     model = ChatBotModel(True, batch_size=1)
     model.build_graph()
-
-    # saver = tf.train.import_meta_graph('checkpoints/chatbot-30.meta')
 
     saver = tf.train.Saver()
 
